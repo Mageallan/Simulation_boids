@@ -12,9 +12,9 @@ The Boids model (Craig Reynolds, 1986) simulates collective behaviors inspired b
 |   |__ Settings.h/cpp  
 |  
 |__ \controller  
-|   |__ ParametersController.h/cpp  
+|   |__ SettingsController.h/cpp  
 |  
 |__ \view  
-|   |__ ParameterView.h/cpp  
+|   |__ SettingsView.h/cpp  
 |   |__ BoidsView.h/cpp  
 \      
