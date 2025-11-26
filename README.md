@@ -18,3 +18,6 @@ The Boids model (Craig Reynolds, 1986) simulates collective behaviors inspired b
 |   |__ SettingsView.h/cpp  
 |   |__ BoidsView.h/cpp  
 \      
+
+projet de Malhoud Alexandre et de Luka Texier en étroite colaboration avec leur connaissance personnelle 
+nous excuses d'avances pour le carnage que vous allez voir apres
