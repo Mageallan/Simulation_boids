@@ -42,3 +42,8 @@
 
 #personalisation
 .vs/
+
+*.user
+*.suo
+*.VC.db
+*.vscode/
