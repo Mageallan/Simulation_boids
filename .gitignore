@@ -47,3 +47,5 @@
 *.suo
 *.VC.db
 *.vscode/
+
+**/build/
