@@ -1,6 +1,6 @@
 #pragma once
 #include <stdexcept> // Pour les exceptions
-namespace db {
+namespace bd {
 
 	template<typename T>
 	class DynamicArray {

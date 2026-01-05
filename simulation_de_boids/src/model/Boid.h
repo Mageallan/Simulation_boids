@@ -1,6 +1,6 @@
 #pragma once
 #include "Vec2.h"
-namespace db {
+namespace bd {
 
 	class Boid {
 		Vec2<double> position;

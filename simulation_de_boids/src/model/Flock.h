@@ -5,28 +5,28 @@
 
 namespace bd {
 
-class Flock {
-private:
-    db::DynamicArray<db::Boid> boids;
+	class Flock {
+	private:
+		bd::DynamicArray<bd::Boid> boids;
 
-public:
-    Flock() {}
+	public:
+		Flock() {}
 
-    void addBoid(const db::Boid& b) {
-        boids.push_back(b);
-    }
+		void addBoid(const bd::Boid& b) {
+			boids.push_back(b);
+		}
 
-    int size() const {
-        return boids.size();
-    }
+		int size() const {
+			return boids.size();
+		}
 
-    db::Boid& operator[](int index) {
-        return boids[index];
-    }
+		bd::Boid& operator[](int index) {
+			return boids[index];
+		}
 
-    const db::Boid& operator[](int index) const {
-        return boids[index];
-    }
-};
+		const bd::Boid& operator[](int index) const {
+			return boids[index];
+		}
+	};
 
 } // namespace bd
