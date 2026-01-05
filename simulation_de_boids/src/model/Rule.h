@@ -11,7 +11,7 @@ public:
     virtual ~Rule() {}
 
     // Calcule la force appliquée à un boid selon la règle
-    virtual Vec2<float> compute(const db::Boid& self, const db::Flock& flock) const = 0;
+    virtual Vec2<float> compute(const bd::Boid& self, const bd::Flock& flock) const = 0;
 };
 
 }

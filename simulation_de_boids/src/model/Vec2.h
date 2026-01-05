@@ -1,7 +1,8 @@
-#ifndef _VEC2_H
-#define _VEC2_H
+#pragma once
 #include <iostream>
 #include <cmath>
+
+namespace bd {
 
 template <typename T>
 class Vec2 {
@@ -70,8 +71,8 @@ class Vec2 {
             return std::sqrt(x*x + y*y);
         }
 
-        
+
 
 };
 
-#endif
+} // namespace bd
