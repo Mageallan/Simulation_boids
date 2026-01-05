@@ -1,7 +1,7 @@
 #pragma once
 #include <stdexcept> // Pour les exceptions
 namespace db {
-	
+
 	template<typename T>
 	class DynamicArray {
 	private:
@@ -41,6 +41,14 @@ namespace db {
 
 		// Accéder à un élément par index
 		T& operator[](int index) {
+			if (index < 0 || index >= high) {
+				throw std::out_of_range("Index out of range");
+			}
+			return data[index];
+		}
+
+
+		const T& operator[](int index) const {
 			if (index < 0 || index >= high) {
 				throw std::out_of_range("Index out of range");
 			}

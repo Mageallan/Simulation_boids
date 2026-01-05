@@ -1,15 +1,32 @@
 #pragma once
-#include "Boid.h"
+
 #include "DynamicArray.h"
-template<typename T>
+#include "Boid.h"
+
+namespace bd {
+
 class Flock {
+private:
+    db::DynamicArray<db::Boid> boids;
 
-	DynamicArray<T> flock;
+public:
+    Flock() {}
 
-public : 
-	Flock();
-	~Flock();
+    void addBoid(const db::Boid& b) {
+        boids.push_back(b);
+    }
 
-	void addBoid(Boid& boid);
-	void suppBoid(Boid& boid)
+    int size() const {
+        return boids.size();
+    }
+
+    db::Boid& operator[](int index) {
+        return boids[index];
+    }
+
+    const db::Boid& operator[](int index) const {
+        return boids[index];
+    }
 };
+
+} // namespace bd

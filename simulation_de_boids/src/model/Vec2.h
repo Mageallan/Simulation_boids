@@ -70,6 +70,8 @@ class Vec2 {
             return std::sqrt(x*x + y*y);
         }
 
+        
+
 };
 
 #endif
