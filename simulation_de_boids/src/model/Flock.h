@@ -1,32 +1,34 @@
 #pragma once
 
-#include "DynamicArray.h"
+#include "util/DynamicArray.h"
 #include "Boid.h"
 
 namespace bd {
 
-	class Flock {
-	private:
-		bd::DynamicArray<bd::Boid> boids;
+class Flock {
+private:
+    DynamicArray<Boid> boids;
 
-	public:
-		Flock() {}
+public:
+    Flock(int count = 50); 
 
-		void addBoid(const bd::Boid& b) {
-			boids.push_back(b);
-		}
+    void addBoid(const Boid& b);
 
-		int size() const {
-			return boids.size();
-		}
+	void addRandomBoid();
+	void removeLastBoid();
 
-		bd::Boid& operator[](int index) {
-			return boids[index];
-		}
+    int size() const;
 
-		const bd::Boid& operator[](int index) const {
-			return boids[index];
-		}
-	};
+    Boid& operator[](int index);
+    const Boid& operator[](int index) const;
+
+    const DynamicArray<Boid>& getBoids() const;
+
+	DynamicArray<Boid> findNeighbors(int index, float radius) const;
+};
+
+
+
+
 
 } // namespace bd

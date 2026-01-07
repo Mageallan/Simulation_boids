@@ -39,6 +39,13 @@ namespace bd {
 			data[high++] = value;
 		}
 
+		void pop_back() {
+    		if (high > 0) {
+        		high--;
+    		}	
+		}
+
+
 		// Accéder à un élément par index
 		T& operator[](int index) {
 			if (index < 0 || index >= high) {

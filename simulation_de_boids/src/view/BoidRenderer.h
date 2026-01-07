@@ -1,12 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "../model/Flock.h"
+#include "../model/Boid.h"
 
-namespace bd {
-
-    class BoidRenderer {
-    public:
-        void draw(sf::RenderWindow& window, const Flock& flock);
-    };
-
-}
+class BoidRenderer {
+public:
+    static sf::ConvexShape makeShape(const bd::Boid& b);
+};

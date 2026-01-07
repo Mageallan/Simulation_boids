@@ -1,25 +1,24 @@
 #include "BoidRenderer.h"
+#include <cmath>
 
-namespace bd {
+sf::ConvexShape BoidRenderer::makeShape(const bd::Boid& b) {
+    sf::ConvexShape triangle;
+    triangle.setPointCount(3);
 
-    void BoidRenderer::draw(sf::RenderWindow& window, const Flock& flock) {
-        for (const Boid& b : flock.getBoids()) {
+    float size = 8.f;
 
-            sf::ConvexShape triangle;
-            triangle.setPointCount(3);
-            triangle.setPoint(0, sf::Vector2f(0, -5));
-            triangle.setPoint(1, sf::Vector2f(10, 0));
-            triangle.setPoint(2, sf::Vector2f(0, 5));
+    // Triangle isocèle pointant vers la droite
+    triangle.setPoint(0, sf::Vector2f(size, 0));        // pointe
+    triangle.setPoint(1, sf::Vector2f(0, size / 2));    // bas
+    triangle.setPoint(2, sf::Vector2f(0, -size / 2));   // haut
 
-            triangle.setFillColor(sf::Color::White);
+    triangle.setFillColor(sf::Color::White);
 
-            triangle.setPosition(b.position.x, b.position.y);
+    triangle.setPosition(b.position.x, b.position.y);
 
-            float angle = atan2(b.speed.y, b.speed.x) * 180 / 3.14159f;
-            triangle.setRotation(angle);
+    float angle = std::atan2(b.velocity.y, b.velocity.x) * 180.f / 3.14159f;
+    triangle.setRotation(angle);
 
-            window.draw(triangle);
-        }
-    }
-
+    return triangle;
 }
+

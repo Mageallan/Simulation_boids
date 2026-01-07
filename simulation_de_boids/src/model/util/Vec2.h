@@ -79,6 +79,11 @@ class Vec2 {
             return Vec2<T>(x / n, y / n);
         }
 
+        static Vec2<float> randomUnit() { 
+            float angle = (float(rand()) / RAND_MAX) * 2.f * 3.1415926f; 
+            return Vec2<float>(std::cos(angle), std::sin(angle)); 
+        }
+
 
 
 };

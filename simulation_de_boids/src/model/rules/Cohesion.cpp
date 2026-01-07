@@ -13,7 +13,7 @@ Vec2<float> Cohesion::apply(const Boid& boid, const DynamicArray<Boid>& neighbor
         sum += (neighbors[i].position - boid.position);
     }
 
-    return (sum / (float)neighbors.size()) * weight;
+    return (sum / (float)neighbors.size());
 }
 
 } // namespace bd

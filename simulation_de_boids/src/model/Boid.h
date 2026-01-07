@@ -1,17 +1,15 @@
 #pragma once
-#include "Vec2.h"
+
+#include "util/Vec2.h"
+
 namespace bd {
 
-	class Boid {
-		Vec2<double> position;
-		Vec2<double> speed;
-		float perception_radius;
+class Boid {
+public:
+    Vec2<float> position;
+    Vec2<float> velocity;
 
+    Boid(const Vec2<float>& pos = {0.f, 0.f},const Vec2<float>& vel = {0.f, 0.f}) : position(pos), velocity(vel) {}
+};
 
-	public:
-		void position_incrementation(float delta_t);
-		void speed_incrementation(float coef);
-
-	};
-
-}
+} // namespace bd

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../Vec2.h"
+#include "../util/Vec2.h"
 #include "../Boid.h"
-#include "../DynamicArray.h"
+#include "../util/DynamicArray.h"
 
 
 namespace bd {
